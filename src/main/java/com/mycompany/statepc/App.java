@@ -6,6 +6,13 @@
 package com.mycompany.statepc;
 
 import com.mycompany.statepc.ui.MainPanel;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import javax.swing.JPanel;
 
 /**
  *
@@ -13,13 +20,14 @@ import com.mycompany.statepc.ui.MainPanel;
  */
 public class App extends javax.swing.JFrame {
     
-    MainPanel mp = new MainPanel();
+    MainPanel mp;
     
     /**
      * Creates new form App
      */
     public App() {
         initComponents();
+        mp = new MainPanel();
         jPanel1.add(mp);
     }
 
@@ -106,3 +114,47 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
+
+//------------------ПРИМЕР------------------------
+//package activity;
+// 
+//import javax.swing.*;
+//import java.awt.*;
+//import static javax.swing.JFrame.EXIT_ON_CLOSE;
+// 
+// 
+//public class Activity {
+//    public static void main(String[] args) throws Exception{
+// 
+//        final int a=300, b=500;
+// 
+//        JPanel[] panels = new JPanel[9];
+//        for(int i = 0; i < 9; i++){
+//            final JPanel dot = new JPanel();
+//            dot.add(new PC());
+//            panels[i] = dot;
+//        }
+// 
+//        JFrame fr=new JFrame();
+//        fr.setTitle("Dots");
+//        fr.setVisible(true);
+//        fr.setSize(a,b);
+//        fr.setLocationRelativeTo(null);
+//        fr.setDefaultCloseOperation(EXIT_ON_CLOSE);
+//        //fr.pack(); // он тут не нужен
+// 
+//        JPanel mainPanel=new JPanel();
+//        mainPanel.setBackground(Color.yellow);
+//        mainPanel.setLayout(new GridLayout(3, 3, 5, 5)); // 2 последних значения -- отступы
+// 
+//        for(int q = 0; q < panels.length; q++) {
+//            mainPanel.add(panels[q]);
+//        }
+// 
+//        JButton button = new JButton(">>>");
+// 
+//        fr.getContentPane().setLayout(new BorderLayout());
+// 
+//        fr.getContentPane().add(button, BorderLayout.SOUTH);
+//        fr.getContentPane().add(mainPanel, BorderLayout.CENTER);
+//}}
