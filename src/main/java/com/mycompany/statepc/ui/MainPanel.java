@@ -6,11 +6,9 @@
 package com.mycompany.statepc.ui;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.GridLayout;
-import javax.swing.BoxLayout;
+import javax.swing.DefaultListModel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
 /**
  *
@@ -20,12 +18,19 @@ public class MainPanel extends javax.swing.JPanel {
 
     private PC pc;
     private JPanel[] panels;
-
+    private DefaultListModel dlm;
     /**
      * Creates new form MainPanel
      */
     public MainPanel() {
         initComponents();
+        dlm = new DefaultListModel();
+        jList1.setModel(dlm);
+        dlm.add(0, "192.168.0.1");
+        dlm.add(0, "192.168.0.2");
+        dlm.add(0, "192.168.0.3");
+        dlm.add(0, "192.168.0.4");
+        dlm.add(0, "192.168.0.5");
         
     }
 
@@ -105,7 +110,7 @@ public class MainPanel extends javax.swing.JPanel {
         jPanel1.removeAll();
         for (int i = 0; i < quantityComps; i++) {
             final JPanel dot = new JPanel();
-            pc = new PC();
+            pc = new PC(dlm.getElementAt(i).toString());
             dot.add(pc);
             panels[i] = dot;
         }
