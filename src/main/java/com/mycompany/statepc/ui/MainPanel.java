@@ -159,7 +159,7 @@ public class MainPanel extends javax.swing.JPanel {
         jPanel1.removeAll();
         for (int i = 0; i < quantityComps; i++) {
             final JPanel dot = new JPanel();
-            pc = new PC();
+            pc = new PC(dlm.getElementAt(i).toString());
             dot.add(pc);
             panels[i] = dot;
         }

@@ -5,21 +5,27 @@
  */
 package com.mycompany.statepc.ui;
 
+import com.mycompany.statepc.util.ImagePanel;
+
 /**
  *
  * @author директор
  */
 public class PC extends javax.swing.JPanel {
-
+    ImagePanel imagePanel;
+    private String ip;
     /**
      * Creates new form PC
      */
-    public PC() {
+    public PC(String ip) {
         initComponents();
+        this.ip = ip;
+        setNamePC();
+        //imagePanel = new ImagePanel(getClass().getResource("resources/pc_off.jpg"));
     }
 
-    public void setNamePC(String line){
-        jLabel1.setText(line);
+    private void setNamePC(){
+        jLabel1.setText(ip);
     }
     /**
      * This method is called from within the constructor to initialize the form.
