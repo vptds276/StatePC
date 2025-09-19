@@ -6,13 +6,6 @@
 package com.mycompany.statepc;
 
 import com.mycompany.statepc.ui.MainPanel;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.GridLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
-import javax.swing.JPanel;
 
 /**
  *
